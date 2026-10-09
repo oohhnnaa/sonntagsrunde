@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Meine Komoot-Tour</title>
+<style>
+  :root {
+    --bg: #f5f4f0;
+    --surface: #ffffff;
+    --text: #1f2a1f;
+    --muted: #5c6b5c;
+    --accent: #6ab04c;
+    --border: #e1ddd3;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141813;
+      --surface: #1d2318;
+      --text: #eef1e8;
+      --muted: #a3ad9a;
+      --accent: #7fc85c;
+      --border: #2b3324;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  body {
+    min-height: 100dvh;
+    padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  header {
+    width: 100%;
+    max-width: 720px;
+    padding: 20px 16px 8px;
+    text-align: center;
+  }
+  header h1 {
+    margin: 0 0 4px;
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+  header p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+  main {
+    width: 100%;
+    max-width: 720px;
+    padding: 12px 16px 32px;
+  }
+  .embed-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  }
+  .embed-card iframe {
+    display: block;
+    width: 100%;
+    border: 0;
+  }
+  footer {
+    width: 100%;
+    max-width: 720px;
+    padding: 0 16px 24px;
+    text-align: center;
+    font-size: 0.75rem;
+    color: var(--muted);
+  }
+  footer a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1>Viel Spass auf der Tour, Tuffi!</h1>
+    <p>Tourdetails, Karte und Höhenprofil von komoot</p>
+  </header>
+  <main>
+    <div class="embed-card">
+      <iframe
+        src="https://www.komoot.com/tour/3318397881/embed?share_token=aFIAwJCO8hbkZGZbr6QxCTwxNyAZHP3yTX4CXAfflrZMmvj06M&amp;hl=de&amp;layout=classic&amp;profile=1"
+        width="100%"
+        height="700"
+        frameborder="0"
+        scrolling="no"
+        allow="fullscreen"
+        allowfullscreen
+        loading="lazy"
+        title="komoot Tour"
+      ></iframe>
+    </div>
+  </main>
+  <footer>
+    Tour geteilt über <a href="https://www.komoot.com" target="_blank" rel="noopener noreferrer">komoot</a>
+  </footer>
+</body>
+</html>
